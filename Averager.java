@@ -1,16 +1,32 @@
 /**
-*
-* Reads in scores until a negative value is encountered, at which point it determines and prints the average
-*
-* @author <your name here>
-* @version <date you finished the code>
+* @author Alex Gandhi
+* @version 14/10/14
 *
 */
+
+import java.util.Scanner;
 
 public class Averager {
 	
 	public static void main(String[] args) {
-		// TODO - Put your code here
-	}
+      Scanner scnr = new Scanner(System.in);
+      double totalNumbers = 0.0;
+      double enterNumbers = 0.0;
+      System.out.println("Enter number you would like averaged, when finished enter -1");
+      double addNumbers = scnr.nextDouble();
+      while (addNumbers != -1) { // while addCalories does NOT have the value of -1
+         totalNumbers = totalNumbers + addNumbers;
+         enterNumbers = enterNumbers + 1;
+         System.out.println("Enter another number or -1 to exit");
 
-}
+         addNumbers = scnr.nextDouble();
+       }
+       
+       System.out.println("Average of Numbers: " + totalNumbers / enterNumbers);
+     }
+} 
+
+   
+
+
+
